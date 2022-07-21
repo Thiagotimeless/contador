@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+   <title>Contador da Linha</title>
+    <img src="etech_.png" width="350">
+    <style>
+     *{
+      margin: 0;
+      box-sizing: border-box;
+     } 
+     body{
+      min-height: 100vh;
+      background:  rgb(6, 53, 6);
+      color: white;
+      display: grid;
+      place-items: center;
+     }
+     section{
+      background: rgb(2, 63, 57);
+      padding: 15px;
+      border-radius: 5px;
+      text-align: center;
+     }
+     h1{ color: rgb(0, 0, 3);
+      font-size: 40px;
+     }
+     p{color: black;
+      font-family:Arial, Helvetica, sans-serif;
+      font-size: 200px;
+      width: 250px;
+     }
+    </style>
+  </head>
+
+  <body>
+   <section>
+     <h1>Produção Total</h1>
+     <p id ="resultado"></p>
+     <button onclick="diminuir()"> menos </button>
+     <button onclick="aumentar()"> mais </button>
+    
+   </section>
+   <script>
+
+      let numero = 0
+
+      function aumentar(){
+        numero = numero +1
+        mostrarNumero()
+      }
+      function diminuir(){
+        numero = numero -1
+        mostrarNumero()
+      }
+      function mostrarNumero(){
+       const p =document.querySelector("#resultado")
+       p.innerText = numero   
+      }
+      mostrarNumero()
+   </script>
+  </body>
+
+</html>
